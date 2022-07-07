@@ -16,9 +16,17 @@ service:
   type: NodePort
   port: 80
 
+# resourceQuota:
+#   requests:
+#     cpu: 1
+#     memory: 2Gi
+#   limits:
+#     cpu: 2
+#     memory: 4Gi
+
 namespace:
   name: test-lr
-  LimitRange:
+  limitRange:
     containerLimit:
       default:
         cpu: 1
@@ -32,7 +40,7 @@ namespace:
       min:
         cpu: 200m
         memory: 256Mi
-  ResourceQuota:
+  resourceQuota:
     requests:
       cpu: 1
       memory: 2Gi

@@ -4,7 +4,7 @@ metadata:
   name: simple-node-app-rq
 spec:
   hard:
-    requests.cpu: {{.Values.namespace.ResourceQuota.requests.cpu}}
-    requests.memory: {{.Values.namespace.ResourceQuota.requests.memory}}
-    limits.cpu: {{.Values.namespace.ResourceQuota.limits.cpu}}
-    limits.memory: {{.Values.namespace.ResourceQuota.limits.memory}}
+    requests.cpu: {{ .Values.namespace.resourceQuota.requests.cpu }}
+    requests.memory: {{ .Values.namespace.resourceQuota.requests.memory }}
+    limits.cpu: {{ .Values.namespace.resourceQuota.limits.cpu }}
+    limits.memory: {{ .Values.namespace.resourceQuota.limits.memory }}
