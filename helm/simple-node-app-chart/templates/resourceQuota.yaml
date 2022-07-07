@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: simple-node-app-rq
+spec:
+  hard:
+    requests.cpu: {{.Values.namespace.ResourceQuota.requests.cpu}}
+    requests.memory: {{.Values.namespace.ResourceQuota.requests.memory}}
+    limits.cpu: {{.Values.namespace.ResourceQuota.limits.cpu}}
+    limits.memory: {{.Values.namespace.ResourceQuota.limits.memory}}

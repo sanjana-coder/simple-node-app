@@ -16,6 +16,29 @@ service:
   type: NodePort
   port: 80
 
+namespace:
+  name: test-lr
+  LimitRange:
+    containerLimit:
+      default:
+        cpu: 1
+        memory: 512Mi
+      defaultRequest:
+        cpu: 0.5
+        memory: 256Mi
+      max: 
+        cpu: 2
+        memory: 4Gi
+      min:
+        cpu: 200m
+        memory: 256Mi
+  ResourceQuota:
+    requests:
+      cpu: 1
+      memory: 2Gi
+    limits:
+      cpu: 2
+      memory: 4Gi
 
 
 # ingress:
