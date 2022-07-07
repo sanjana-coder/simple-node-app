@@ -5,15 +5,28 @@ metadata:
 spec:
   limits:
   - default:
-      cpu: {{.Values.namespace.limitRange.containerLimit.default.cpu}}
-      memory: {{.Values.namespace.limitRange.containerLimit.default.memory}}
+      cpu: 1
+      memory: 512Mi
     defaultRequest:
-      cpu: {{.Values.namespace.limitRange.containerLimit.defaultRequest.cpu}}
-      memory: {{.Values.namespace.limitRange.containerLimit.defaultRequest.memory}}
+      cpu: 0.5
+      memory: 256Mi
     max:
-      cpu: {{.Values.namespace.limitRange.containerLimit.max.cpu}}
-      memory: {{.Values.namespace.limitRange.containerLimit.max.memory}}
+      cpu: 2
+      memory: 4Gi
     min:
-      cpu: {{.Values.namespace.limitRange.containerLimit.min.cpu}}
-      memory: {{.Values.namespace.limitRange.containerLimit.min.memory}}
-    type: Container 
+      cpu: 200m
+      memory: 256Mi
+
+  # - default:
+  #     cpu: {{.Values.namespace.limitRange.containerLimit.default.cpu}}
+  #     memory: {{.Values.namespace.limitRange.containerLimit.default.memory}}
+  #   defaultRequest:
+  #     cpu: {{.Values.namespace.limitRange.containerLimit.defaultRequest.cpu}}
+  #     memory: {{.Values.namespace.limitRange.containerLimit.defaultRequest.memory}}
+  #   max:
+  #     cpu: {{.Values.namespace.limitRange.containerLimit.max.cpu}}
+  #     memory: {{.Values.namespace.limitRange.containerLimit.max.memory}}
+  #   min:
+  #     cpu: {{.Values.namespace.limitRange.containerLimit.min.cpu}}
+  #     memory: {{.Values.namespace.limitRange.containerLimit.min.memory}}
+  #   type: Container 
