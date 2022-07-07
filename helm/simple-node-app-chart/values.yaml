@@ -16,6 +16,9 @@ service:
   type: NodePort
   port: 80
 
+namespace:
+  name: test-lr
+
 # namespace:
 #   name: test-lr
 #   LimitRange:

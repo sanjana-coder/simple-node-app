@@ -16,7 +16,7 @@ spec:
     min:
       cpu: 200m
       memory: 256Mi
-
+    type: Container
   # - default:
   #     cpu: {{.Values.namespace.limitRange.containerLimit.default.cpu}}
   #     memory: {{.Values.namespace.limitRange.containerLimit.default.memory}}
